@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Steps to run the app:
+## Steps to run the app:
 
 ### `npm install`
 
@@ -12,6 +12,8 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # Considerations
+
+**Node:** *8.11.4* was used for developing and testing this app.
 
 App built considering the original requirements of the challenge. To the sake of simplicity, no extra complexity, features or functionalities were added to the scope of the project.
 
