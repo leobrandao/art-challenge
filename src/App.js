@@ -5,36 +5,12 @@ import "./App.css";
 import Column from "./components/Column";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   columns: [
-    //     {
-    //       name: "Person 1",
-    //       items: ["Item 1", "Item 2", "Item 3"]
-    //     },
-    //     {
-    //       name: "Person 2",
-    //       items: ["Item 4", "Item 5", "Item 6"]
-    //     },
-    //     {
-    //       name: "Person 3",
-    //       items: ["Item 7", "Item 8", "Item 9"]
-    //     },
-    //     {
-    //       name: "Person 4",
-    //       items: ["Item 10", "Item 11", "Item 12"]
-    //     }
-    //   ]
-    // };
-
-    this.state = {
-      "person 1": ["Item 1", "Item 2", "Item 3"],
-      "person 2": [ "Item 4", "Item 5", "Item 6" ],
-      "Person 3": [ "Item 7", "Item 8", "Item 9" ],
-      "Person 4": [ "Item 10", "Item 11", "Item 12" ]
-    }
-
+  
+  state = {
+    "person 1": ["Item 1", "Item 2", "Item 3"],
+    "person 2": [ "Item 4", "Item 5", "Item 6" ],
+    "Person 3": [ "Item 7", "Item 8", "Item 9" ],
+    "Person 4": [ "Item 10", "Item 11", "Item 12" ]
   }
 
   addNewItem = columnName => {
@@ -47,40 +23,33 @@ class App extends React.Component {
     this.setState( columns );
   };
 
-  moveItem = (item, columnName, direction) => {
-    
-    const columnIndex = this.state.columns.findIndex( (column) => column.name === columnName )
-    const newColumnIndex = columnIndex + direction;
-    const columns = [...this.state.columns];
+  moveItem = (item, columnOrig, columnDest) => {
+    if ( !columnDest ) return;
 
-    if ( newColumnIndex < 0 || newColumnIndex > columns.length - 1 ) return;
+    const columns = { ...this.state }
 
-    const sourceColumn = columns[columnIndex];
+    columns[columnDest] = [...columns[columnDest], item];
+    columns[columnOrig] = columns[columnOrig].filter( filteredItem => filteredItem !== item )
 
-    sourceColumn.items = sourceColumn.items.filter( filteredItem => filteredItem !== item );
-
-    columns[columnIndex] = sourceColumn;
-    columns[newColumnIndex].items.push(item);
-
-    this.setState({
-      columns
-    });
+    this.setState( columns );
   }
 
   render() {
     const columns = this.state;
-
+    const keys = Object.keys(columns);
     return (
       <div className="container">
         <h1 className="app--title">ART.com Kanban Challenge</h1>
         <div className="row">
-          {Object.entries(columns).map(([key, value]) => (
+          {keys.map((key, index) => (
             <Column
               key={key}
               addNewItem={this.addNewItem}
               moveItem={this.moveItem}
               columnName={key}
-              items={value}
+              items={columns[key]}
+              prevColumn={keys[index-1]}
+              nextColumn={keys[index+1]}
             />
           ))}
         </div>
