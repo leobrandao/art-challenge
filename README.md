@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 App built considering the original requirements of the challenge. To the sake of simplicity, no extra complexity, features or functionalities were added to the scope of the project.
 
-## Requirements:
+## Challenge Requirements:
     - Build a Kanban Like application with 4 different columns with a list of items based on the initial mocked data
     - Each Column should have its own button for adding new item to its list
     - The new item information should be captured from the dialague using window.promt
