@@ -4,30 +4,30 @@
 }
 
 .kanban--col {
-  background-color: #66B2FF;
-  border: 2px solid #FFF;
+  background-color: #66b2ff;
+  border: 2px solid #fff;
   text-align: center;
 }
 
- ul {
-  padding: inherit;  
-} 
+ul {
+  padding: inherit;
+}
 
 li {
   margin: 0.25em;
   list-style: none;
-  background-color: #FFFF66;
+  background-color: #ffff66;
   padding: 0.25em 1em;
 }
 
 li span.arrow--left {
-  float: left; 
+  float: left;
 }
 
 li span.arrow--right {
-  float: right; 
+  float: right;
 }
 
 button.add-new-item {
   margin: 1em auto;
-} 
+}

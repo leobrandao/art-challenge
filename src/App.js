@@ -17,7 +17,7 @@ class App extends React.Component {
     if (newItem === null || newItem === "") return;
     const columns = { ...this.state };
 
-    columns[columnName] = [ ...columns[columnName], newItem ];
+    columns[columnName] = [...columns[columnName], newItem];
 
     this.setState(columns);
   };
@@ -27,8 +27,10 @@ class App extends React.Component {
 
     const columns = { ...this.state };
 
-    columns[columnDest] = [ ...columns[columnDest], item ];
-    columns[columnOrig] = columns[columnOrig].filter( filteredItem => filteredItem !== item );
+    columns[columnDest] = [...columns[columnDest], item];
+    columns[columnOrig] = columns[columnOrig].filter(
+      filteredItem => filteredItem !== item
+    );
 
     this.setState(columns);
   };
