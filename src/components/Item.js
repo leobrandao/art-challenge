@@ -1,14 +1,11 @@
 import React from 'react';
 
-const Item = (props) => {
-    const { moveItem, item, columnName, prevColumn, nextColumn } = props;
-    return (
-        <li>
-            <span className='arrow--left' onClick={ () => moveItem(item, columnName, prevColumn)}>&lt; </span>
-            {item}
-            <span className='arrow--right' onClick={ () => moveItem(item, columnName, nextColumn)}> &gt;</span>
-        </li>
-    )
-}
+const Item = ({ item, showLeftArrow, showRightArrow, onPrevious, onNext }) => (
+    <li>
+        { showLeftArrow && <span className='arrow--left' onClick={onPrevious}>&lt;</span> }
+        { item }
+        { showRightArrow && <span className='arrow--right' onClick={onNext}>&gt;</span> }
+    </li>
+)
 
 export default Item;
