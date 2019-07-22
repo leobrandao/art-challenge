@@ -40,7 +40,7 @@ class App extends React.Component {
     const keys = Object.keys(columns);
     return (
       <div className="container">
-        <h1 className="app--title">ART.com Kanban Challenge</h1>
+        <h1 className="app--title">Kanban Challenge</h1>
         <div className="row">
           {keys.map((key, index) => (
             <Column
