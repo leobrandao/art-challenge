@@ -22,10 +22,12 @@ li {
 
 li span.arrow--left {
   float: left;
+  cursor: pointer;
 }
 
 li span.arrow--right {
   float: right;
+  cursor: pointer;
 }
 
 button.add-new-item {
