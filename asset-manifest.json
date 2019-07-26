@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/kanban-challenge/static/css/main.b43e117e.chunk.css",
-    "main.js": "/kanban-challenge/static/js/main.54cab3a3.chunk.js",
-    "main.js.map": "/kanban-challenge/static/js/main.54cab3a3.chunk.js.map",
+    "main.css": "/kanban-challenge/static/css/main.9d0e814c.chunk.css",
+    "main.js": "/kanban-challenge/static/js/main.1f141714.chunk.js",
+    "main.js.map": "/kanban-challenge/static/js/main.1f141714.chunk.js.map",
     "runtime~main.js": "/kanban-challenge/static/js/runtime~main.6320d26f.js",
     "runtime~main.js.map": "/kanban-challenge/static/js/runtime~main.6320d26f.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/kanban-challenge/static/css/2.22a7d4ef.chunk.css",
     "static/js/2.3567cc7e.chunk.js": "/kanban-challenge/static/js/2.3567cc7e.chunk.js",
     "static/js/2.3567cc7e.chunk.js.map": "/kanban-challenge/static/js/2.3567cc7e.chunk.js.map",
     "index.html": "/kanban-challenge/index.html",
-    "precache-manifest.3b61b8d01f609a5b32f2918fd0044b18.js": "/kanban-challenge/precache-manifest.3b61b8d01f609a5b32f2918fd0044b18.js",
+    "precache-manifest.2969cd5dd02b227a591427868af7b03a.js": "/kanban-challenge/precache-manifest.2969cd5dd02b227a591427868af7b03a.js",
     "service-worker.js": "/kanban-challenge/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/kanban-challenge/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.b43e117e.chunk.css.map": "/kanban-challenge/static/css/main.b43e117e.chunk.css.map"
+    "static/css/main.9d0e814c.chunk.css.map": "/kanban-challenge/static/css/main.9d0e814c.chunk.css.map"
   }
 }
